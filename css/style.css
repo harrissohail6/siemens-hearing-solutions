@@ -2500,12 +2500,22 @@ ul { list-style: none; }
    Mobile Fixes - Marquee, Grids, Carousel
    ============================================ */
 
+/* Hide duplicated marquee items on desktop */
+.marquee-dup {
+  display: none !important;
+}
+
 @keyframes marqueeScroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
 @media (max-width: 768px) {
+  /* Show marquee duplicates on mobile */
+  .marquee-dup {
+    display: flex !important;
+  }
+
   /* Trust Bar Marquee */
   .trust-bar-inner {
     display: flex !important;
