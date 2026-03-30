@@ -2159,6 +2159,7 @@ ul { list-style: none; }
   padding: 12px 0;
   border-bottom: 1px solid var(--border-grey);
   font-size: 0.9rem;
+  gap: 16px;
 }
 
 .spec-row:last-child {
@@ -2168,11 +2169,14 @@ ul { list-style: none; }
 .spec-label {
   color: var(--medium-grey);
   font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .spec-value {
   color: var(--dark);
   font-weight: 700;
+  text-align: right;
 }
 
 .product-features-grid {
