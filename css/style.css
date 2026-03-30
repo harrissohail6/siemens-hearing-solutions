@@ -1756,9 +1756,10 @@ ul { list-style: none; }
     border-radius: 50px;
     padding: 6px;
     gap: 4px !important;
-    display: inline-flex !important;
+    display: flex !important;
+    justify-content: center !important;
     margin: 0 auto 16px;
-    width: auto;
+    width: fit-content;
   }
 
   .currency-label {
