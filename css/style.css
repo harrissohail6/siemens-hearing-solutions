@@ -2368,14 +2368,21 @@ ul { list-style: none; }
   .trust-bar-inner {
     display: flex !important;
     gap: 32px !important;
-    animation: marqueeScroll 15s linear infinite;
-    width: max-content;
+    animation: marqueeScroll 12s linear infinite;
+    width: max-content !important;
     flex-wrap: nowrap !important;
     max-width: none !important;
+    justify-content: flex-start !important;
+    padding: 0 !important;
+  }
+
+  .trust-bar-inner > div {
+    flex-shrink: 0;
+    white-space: nowrap;
   }
 
   .trust-bar-wrapper {
-    overflow: hidden;
+    overflow: hidden !important;
   }
 
   /* Stats Counter Marquee */
