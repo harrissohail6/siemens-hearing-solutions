@@ -200,3 +200,46 @@ function convertPrices(currency) {
 }
 
 document.addEventListener('DOMContentLoaded', initCurrencySwitcher);
+
+// ============================================
+// Testimonial Mobile Carousel Dots
+// ============================================
+function initTestimonialCarousel() {
+  if (window.innerWidth > 768) return;
+  const grid = document.querySelector('.testimonials-grid');
+  if (!grid) return;
+
+  const cards = grid.querySelectorAll('.testimonial-card');
+  if (cards.length === 0) return;
+
+  // Create dots container
+  let dotsContainer = document.querySelector('.testimonial-dots');
+  if (!dotsContainer) {
+    dotsContainer = document.createElement('div');
+    dotsContainer.className = 'testimonial-dots';
+    dotsContainer.style.cssText = 'display:flex;justify-content:center;gap:8px;margin-top:16px;';
+    grid.parentNode.insertBefore(dotsContainer, grid.nextSibling);
+
+    cards.forEach((_, i) => {
+      const dot = document.createElement('div');
+      dot.style.cssText = `width:8px;height:8px;border-radius:50%;background:${i === 0 ? 'var(--signia-red)' : 'rgba(255,255,255,0.2)'};transition:all 0.3s;cursor:pointer;`;
+      dot.addEventListener('click', () => {
+        cards[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      });
+      dotsContainer.appendChild(dot);
+    });
+  }
+
+  // Update dots on scroll
+  grid.addEventListener('scroll', () => {
+    const scrollLeft = grid.scrollLeft;
+    const cardWidth = cards[0].offsetWidth + 16;
+    const activeIndex = Math.round(scrollLeft / cardWidth);
+    dotsContainer.querySelectorAll('div').forEach((dot, i) => {
+      dot.style.background = i === activeIndex ? 'var(--signia-red)' : 'rgba(255,255,255,0.2)';
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initTestimonialCarousel);
+window.addEventListener('resize', initTestimonialCarousel);

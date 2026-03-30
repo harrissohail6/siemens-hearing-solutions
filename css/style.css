@@ -2326,12 +2326,135 @@ ul { list-style: none; }
 
 @media (max-width: 768px) {
   .testimonials-grid {
-    grid-template-columns: 1fr;
+    display: flex !important;
+    grid-template-columns: unset !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px !important;
+    padding-bottom: 16px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .testimonials-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .testimonial-card {
+    min-width: 280px !important;
+    max-width: 300px !important;
+    flex-shrink: 0;
+    scroll-snap-align: center;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============================================
+   Mobile Fixes - Marquee, Grids, Carousel
+   ============================================ */
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  /* Trust Bar Marquee */
+  .trust-bar-inner {
+    display: flex !important;
+    gap: 32px !important;
+    animation: marqueeScroll 15s linear infinite;
+    width: max-content;
+    flex-wrap: nowrap !important;
+    max-width: none !important;
+  }
+
+  .trust-bar-wrapper {
+    overflow: hidden;
+  }
+
+  /* Stats Counter Marquee */
+  .stats-grid {
+    display: flex !important;
+    grid-template-columns: unset !important;
+    gap: 40px !important;
+    animation: marqueeScroll 20s linear infinite;
+    width: max-content;
+    flex-wrap: nowrap !important;
+  }
+
+  .stats-wrapper {
+    overflow: hidden;
+  }
+
+  .stats-grid > div {
+    min-width: 140px;
+    flex-shrink: 0;
+  }
+
+  /* Why Choose Us Grid */
+  .why-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .why-grid > div {
+    padding: 24px 20px !important;
+  }
+
+  .why-grid > div h3 {
+    font-size: 0.95rem !important;
+  }
+
+  .why-grid > div p {
+    font-size: 0.8rem !important;
+  }
+
+  /* Pricing Grid */
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .pricing-grid > div {
+    font-size: 0.85rem;
+  }
+
+  .pricing-grid .price-amount,
+  .pricing-grid > div > div:nth-child(2) > div:first-child {
+    font-size: 1.5rem !important;
+  }
+
+  /* Authorized Partner Banner */
+  .partner-banner-inner {
+    flex-direction: column !important;
+    gap: 24px !important;
+    padding: 32px 20px !important;
+    text-align: center;
+  }
+
+  .partner-banner-inner > div[style*="width:1px"] {
+    width: 60px !important;
+    height: 1px !important;
+    background: rgba(255,255,255,0.08) !important;
+  }
+
+  .partner-banner-inner .brand-signia-text {
+    font-size: 2.5rem !important;
+  }
+
+  .partner-banner-inner .brand-siemens-text {
+    font-size: 1.8rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-grid {
+    grid-template-columns: 1fr 1fr !important;
   }
 }

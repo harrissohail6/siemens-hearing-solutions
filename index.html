@@ -117,8 +117,14 @@
   </section>
 
   <!-- ========== TRUST BAR ========== -->
-  <section style="background:linear-gradient(90deg,#0a0a0a,#141414,#0a0a0a);padding:20px 0;border-top:1px solid rgba(225,0,26,0.15);border-bottom:1px solid rgba(0,153,153,0.15);overflow:hidden;">
-    <div style="display:flex;justify-content:center;gap:48px;flex-wrap:wrap;align-items:center;max-width:1200px;margin:0 auto;padding:0 20px;">
+  <section class="trust-bar-wrapper" style="background:linear-gradient(90deg,#0a0a0a,#141414,#0a0a0a);padding:20px 0;border-top:1px solid rgba(225,0,26,0.15);border-bottom:1px solid rgba(0,153,153,0.15);overflow:hidden;">
+    <div class="trust-bar-inner" style="display:flex;justify-content:center;gap:48px;flex-wrap:wrap;align-items:center;max-width:1200px;margin:0 auto;padding:0 20px;">
+      <div style="display:flex;align-items:center;gap:10px;"><div style="width:36px;height:36px;border-radius:50%;background:rgba(225,0,26,0.1);display:flex;align-items:center;justify-content:center;font-size:1.1rem;">&#9989;</div><span style="color:rgba(255,255,255,0.7);font-size:0.8rem;font-weight:600;">Authorized Dealer</span></div>
+      <div style="display:flex;align-items:center;gap:10px;"><div style="width:36px;height:36px;border-radius:50%;background:rgba(0,153,153,0.1);display:flex;align-items:center;justify-content:center;font-size:1.1rem;">&#127465;&#127466;</div><span style="color:rgba(255,255,255,0.7);font-size:0.8rem;font-weight:600;">Deutsche Technik</span></div>
+      <div style="display:flex;align-items:center;gap:10px;"><div style="width:36px;height:36px;border-radius:50%;background:rgba(225,0,26,0.1);display:flex;align-items:center;justify-content:center;font-size:1.1rem;">&#128274;</div><span style="color:rgba(255,255,255,0.7);font-size:0.8rem;font-weight:600;">Warranty Included</span></div>
+      <div style="display:flex;align-items:center;gap:10px;"><div style="width:36px;height:36px;border-radius:50%;background:rgba(0,153,153,0.1);display:flex;align-items:center;justify-content:center;font-size:1.1rem;">&#128666;</div><span style="color:rgba(255,255,255,0.7);font-size:0.8rem;font-weight:600;">Nationwide Delivery</span></div>
+      <div style="display:flex;align-items:center;gap:10px;"><div style="width:36px;height:36px;border-radius:50%;background:rgba(225,0,26,0.1);display:flex;align-items:center;justify-content:center;font-size:1.1rem;">&#129658;</div><span style="color:rgba(255,255,255,0.7);font-size:0.8rem;font-weight:600;">Hearing Tests</span></div>
+      <!-- Duplicated for seamless marquee -->
       <div style="display:flex;align-items:center;gap:10px;"><div style="width:36px;height:36px;border-radius:50%;background:rgba(225,0,26,0.1);display:flex;align-items:center;justify-content:center;font-size:1.1rem;">&#9989;</div><span style="color:rgba(255,255,255,0.7);font-size:0.8rem;font-weight:600;">Authorized Dealer</span></div>
       <div style="display:flex;align-items:center;gap:10px;"><div style="width:36px;height:36px;border-radius:50%;background:rgba(0,153,153,0.1);display:flex;align-items:center;justify-content:center;font-size:1.1rem;">&#127465;&#127466;</div><span style="color:rgba(255,255,255,0.7);font-size:0.8rem;font-weight:600;">Deutsche Technik</span></div>
       <div style="display:flex;align-items:center;gap:10px;"><div style="width:36px;height:36px;border-radius:50%;background:rgba(225,0,26,0.1);display:flex;align-items:center;justify-content:center;font-size:1.1rem;">&#128274;</div><span style="color:rgba(255,255,255,0.7);font-size:0.8rem;font-weight:600;">Warranty Included</span></div>
@@ -131,6 +137,7 @@
   <section style="padding:70px 0;background:#0a0a0a;position:relative;overflow:hidden;">
     <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(225,0,26,0.04) 0%,transparent 70%);border-radius:50%;"></div>
     <div class="container" style="position:relative;z-index:2;">
+      <div class="stats-wrapper">
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;" class="stats-grid">
         <div class="fade-up" style="padding:24px;">
           <div style="font-size:3.2rem;font-weight:800;color:var(--signia-red);text-shadow:0 0 30px rgba(225,0,26,0.3);">145+</div>
@@ -156,6 +163,32 @@
           <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:2px;">Original</div>
           <div style="font-size:0.7rem;color:rgba(255,255,255,0.25);margin-top:2px;">Genuine Products</div>
         </div>
+        <!-- Duplicated for seamless marquee -->
+        <div class="fade-up" style="padding:24px;">
+          <div style="font-size:3.2rem;font-weight:800;color:var(--signia-red);text-shadow:0 0 30px rgba(225,0,26,0.3);">145+</div>
+          <div style="width:40px;height:2px;background:linear-gradient(90deg,var(--signia-red),transparent);margin:12px auto;"></div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:2px;">Jahre Erbe</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.25);margin-top:2px;">Years of Heritage</div>
+        </div>
+        <div class="fade-up" style="padding:24px;">
+          <div style="font-size:3.2rem;font-weight:800;color:var(--siemens-teal);text-shadow:0 0 30px rgba(0,153,153,0.3);">21+</div>
+          <div style="width:40px;height:2px;background:linear-gradient(90deg,var(--siemens-teal),transparent);margin:12px auto;"></div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:2px;">Modelle</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.25);margin-top:2px;">Models Available</div>
+        </div>
+        <div class="fade-up" style="padding:24px;">
+          <div style="font-size:3.2rem;font-weight:800;color:var(--signia-red);text-shadow:0 0 30px rgba(225,0,26,0.3);">3</div>
+          <div style="width:40px;height:2px;background:linear-gradient(90deg,var(--signia-red),transparent);margin:12px auto;"></div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:2px;">Qualit&auml;tsstufen</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.25);margin-top:2px;">Quality Tiers</div>
+        </div>
+        <div class="fade-up" style="padding:24px;">
+          <div style="font-size:3.2rem;font-weight:800;color:var(--siemens-teal);text-shadow:0 0 30px rgba(0,153,153,0.3);">100%</div>
+          <div style="width:40px;height:2px;background:linear-gradient(90deg,var(--siemens-teal),transparent);margin:12px auto;"></div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:2px;">Original</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.25);margin-top:2px;">Genuine Products</div>
+        </div>
+      </div>
       </div>
     </div>
   </section>
@@ -229,7 +262,7 @@
         <h2 style="color:#fff;">Pakistan's Most Trusted<br>Hearing Aid Dealer</h2>
         <p style="color:rgba(255,255,255,0.5);">When it comes to your hearing, trust only the best. Here's why thousands choose us.</p>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+      <div class="why-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
         <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:36px 28px;transition:all 0.3s ease;" class="fade-up" onmouseover="this.style.background='rgba(225,0,26,0.08)';this.style.borderColor='rgba(225,0,26,0.2)';this.style.transform='translateY(-4px)'" onmouseout="this.style.background='rgba(255,255,255,0.04)';this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='none'">
           <div style="font-size:2.5rem;margin-bottom:16px;">&#127463;&#127466;</div>
           <h3 style="font-size:1.1rem;margin-bottom:8px;">Deutsche Qualit&auml;t &mdash; German Quality</h3>
@@ -272,7 +305,7 @@
         <h2 style="color:#fff;">Hearing Aid Prices Starting From</h2>
         <p style="color:rgba(255,255,255,0.5);">Premium German hearing technology at every budget. All prices per unit unless specified.</p>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
+      <div class="pricing-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
         <div class="fade-up" style="background:#1a1a1a;border:1px solid rgba(255,255,255,0.08);border-radius:16px;overflow:hidden;text-align:center;transition:all 0.3s ease;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 10px 40px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
           <div style="padding:24px;background:rgba(255,255,255,0.03);">
             <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.4);font-weight:600;">Basic Digital</div>
@@ -394,7 +427,7 @@
   <!-- ========== AUTHORIZED PARTNER BANNER ========== -->
   <section style="padding:60px 0;background:#0a0a0a;">
     <div class="container">
-      <div class="fade-up" style="display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;padding:48px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:20px;">
+      <div class="fade-up partner-banner-inner" style="display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;padding:48px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:20px;">
         <div style="text-align:center;">
           <div style="font-size:3.5rem;font-weight:800;letter-spacing:2px;"><span style="color:var(--signia-red);">si</span><span style="color:rgba(255,255,255,0.4);">gnia</span></div>
           <div style="font-size:0.9rem;color:rgba(255,255,255,0.35);font-style:italic;">Life sounds brilliant.</div>
