@@ -1335,6 +1335,81 @@ ul { list-style: none; }
   margin-bottom: 32px;
 }
 
+/* ========== PRICING CARDS ========== */
+.pc-card {
+  background: #1a1a1a;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.pc-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.pc-popular {
+  border: 2px solid var(--signia-red);
+  position: relative;
+  box-shadow: 0 0 30px rgba(225,0,26,0.15);
+}
+
+.pc-popular:hover {
+  box-shadow: 0 0 50px rgba(225,0,26,0.25);
+}
+
+.pc-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--signia-red);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 4px;
+  text-transform: uppercase;
+}
+
+.pc-header {
+  padding: 24px;
+  background: rgba(255,255,255,0.03);
+}
+
+.pc-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.4);
+  font-weight: 600;
+}
+
+.pc-body {
+  padding: 28px 20px;
+}
+
+.pc-price {
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+.pc-sub {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.35);
+  margin-top: 4px;
+}
+
+.pc-features {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.4);
+}
+
 /* ========== WHATSAPP FLOAT ========== */
 .whatsapp-float {
   position: fixed;
@@ -2428,42 +2503,13 @@ ul { list-style: none; }
     gap: 10px !important;
   }
 
-  .pricing-grid > div {
-    font-size: 0.75rem;
-    overflow: hidden;
-  }
-
-  .pricing-grid > div > div:first-child {
-    padding: 16px 10px !important;
-  }
-
-  .pricing-grid > div > div:first-child > div {
-    font-size: 0.6rem !important;
-    letter-spacing: 1px !important;
-  }
-
-  .pricing-grid > div > div:nth-child(2) {
-    padding: 16px 10px !important;
-  }
-
-  .pricing-grid > div > div:nth-child(2) > div:first-child {
-    font-size: 1.3rem !important;
-  }
-
-  .pricing-grid > div > div:nth-child(2) > div:nth-child(2) {
-    font-size: 0.7rem !important;
-  }
-
-  .pricing-grid > div > div:nth-child(2) > div:nth-child(3) {
-    font-size: 0.65rem !important;
-  }
-
-  /* Most Popular badge fix */
-  .pricing-grid > div[style*="position:relative"] > div[style*="position:absolute"] {
-    font-size: 0.55rem !important;
-    padding: 3px !important;
-    letter-spacing: 1px !important;
-  }
+  .pc-header { padding: 14px 8px !important; }
+  .pc-title { font-size: 0.6rem !important; letter-spacing: 1px !important; }
+  .pc-body { padding: 14px 8px !important; }
+  .pc-price { font-size: 1.2rem !important; }
+  .pc-sub { font-size: 0.65rem !important; }
+  .pc-features { font-size: 0.6rem !important; margin-top: 10px !important; padding-top: 10px !important; }
+  .pc-badge { font-size: 0.5rem !important; padding: 3px !important; letter-spacing: 1px !important; }
 
   /* Authorized Partner Banner */
   .partner-banner-inner {
