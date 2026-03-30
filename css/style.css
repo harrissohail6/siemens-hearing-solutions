@@ -1337,27 +1337,41 @@ ul { list-style: none; }
 
 /* ========== PRICING CARDS ========== */
 .pc-card {
-  background: #1a1a1a;
-  border: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(145deg, #1a1a1a, #111);
+  border: 1px solid rgba(255,255,255,0.06);
   border-radius: 16px;
   overflow: hidden;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.pc-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.02), transparent);
+  pointer-events: none;
 }
 
 .pc-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  border-color: rgba(255,255,255,0.12);
 }
 
 .pc-popular {
-  border: 2px solid var(--signia-red);
-  position: relative;
-  box-shadow: 0 0 30px rgba(225,0,26,0.15);
+  border: 2px solid var(--signia-red) !important;
+  box-shadow: 0 0 30px rgba(225,0,26,0.12), inset 0 0 30px rgba(225,0,26,0.03);
+  background: linear-gradient(145deg, #1f0a0c, #111);
 }
 
 .pc-popular:hover {
-  box-shadow: 0 0 50px rgba(225,0,26,0.25);
+  box-shadow: 0 0 50px rgba(225,0,26,0.2), 0 15px 40px rgba(0,0,0,0.4);
+  transform: translateY(-8px);
 }
 
 .pc-badge {
@@ -1365,49 +1379,56 @@ ul { list-style: none; }
   top: 0;
   left: 0;
   right: 0;
-  background: var(--signia-red);
+  background: linear-gradient(90deg, var(--signia-red), #ff3344);
   color: #fff;
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 1.5px;
-  padding: 4px;
+  padding: 5px;
   text-transform: uppercase;
+  z-index: 2;
 }
 
 .pc-header {
-  padding: 24px;
-  background: rgba(255,255,255,0.03);
+  padding: 24px 16px;
+  background: rgba(255,255,255,0.02);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
 }
 
 .pc-title {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: rgba(255,255,255,0.4);
-  font-weight: 600;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.45);
+  font-weight: 700;
 }
 
 .pc-body {
-  padding: 28px 20px;
+  padding: 28px 16px;
 }
 
 .pc-price {
   font-size: 2.2rem;
   font-weight: 800;
+  text-shadow: 0 0 25px currentColor;
+  letter-spacing: -1px;
 }
 
 .pc-sub {
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.35);
-  margin-top: 4px;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.3);
+  margin-top: 6px;
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
 }
 
 .pc-features {
   margin-top: 16px;
   padding-top: 16px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.4);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.5;
 }
 
 /* ========== WHATSAPP FLOAT ========== */
