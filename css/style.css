@@ -2171,12 +2171,15 @@ ul { list-style: none; }
   font-weight: 500;
   white-space: nowrap;
   flex-shrink: 0;
+  min-width: 110px;
+  margin-right: 12px;
 }
 
 .spec-value {
   color: var(--dark);
   font-weight: 700;
   text-align: right;
+  word-break: break-word;
 }
 
 .product-features-grid {
