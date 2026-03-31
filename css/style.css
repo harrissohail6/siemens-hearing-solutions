@@ -2783,19 +2783,29 @@ ul { list-style: none; }
   .stats-grid {
     display: flex !important;
     grid-template-columns: unset !important;
-    gap: 40px !important;
+    gap: 48px !important;
     animation: marqueeScroll 20s linear infinite;
-    width: max-content;
+    width: max-content !important;
     flex-wrap: nowrap !important;
+    align-items: flex-start;
   }
 
   .stats-wrapper {
-    overflow: hidden;
+    overflow: hidden !important;
   }
 
   .stats-grid > div {
-    min-width: 140px;
+    min-width: 160px;
     flex-shrink: 0;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .stats-grid > div > div {
+    width: 100%;
+    text-align: center;
   }
 
   /* Why Choose Us Grid */
