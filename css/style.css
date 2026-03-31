@@ -2496,6 +2496,234 @@ ul { list-style: none; }
   }
 }
 
+/* ========== BLOG ========== */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.blog-card {
+  background: #1a1a1a;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  border-color: rgba(255,255,255,0.12);
+}
+
+.blog-card-image {
+  height: 180px;
+  background: linear-gradient(135deg, #111, #1a1a1a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: rgba(255,255,255,0.1);
+}
+
+.blog-card-body {
+  padding: 24px;
+}
+
+.blog-card-category {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 4px 10px;
+  border-radius: 50px;
+  margin-bottom: 12px;
+}
+
+.blog-card-category.buying-guide { background: rgba(225,0,26,0.15); color: var(--signia-red); }
+.blog-card-category.product-review { background: rgba(0,153,153,0.15); color: var(--siemens-teal); }
+.blog-card-category.hearing-health { background: rgba(255,165,0,0.15); color: #ffa500; }
+.blog-card-category.technology { background: rgba(100,100,255,0.15); color: #8888ff; }
+.blog-card-category.tips-care { background: rgba(0,200,100,0.15); color: #00c864; }
+
+.blog-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.blog-card-title a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.blog-card-title a:hover {
+  color: var(--signia-red);
+}
+
+.blog-card-excerpt {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.blog-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.3);
+}
+
+.blog-card-meta a {
+  color: var(--signia-red);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.blog-card-meta a:hover {
+  color: var(--siemens-teal);
+}
+
+/* Blog Post Page */
+.blog-post-hero {
+  margin-top: 72px;
+  padding: 60px 0 40px;
+  background: linear-gradient(135deg, #0a0a0a, #151515);
+  color: #fff;
+}
+
+.blog-post-hero .breadcrumb {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 16px;
+}
+
+.blog-post-hero .breadcrumb a {
+  color: rgba(255,255,255,0.6);
+}
+
+.blog-post-hero .breadcrumb a:hover {
+  color: var(--signia-red);
+}
+
+.blog-post-hero h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  max-width: 800px;
+  line-height: 1.3;
+}
+
+.blog-post-hero .post-meta {
+  margin-top: 16px;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.4);
+  display: flex;
+  gap: 20px;
+}
+
+.blog-post-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  color: rgba(255,255,255,0.75);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.blog-post-content h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 40px 0 16px;
+}
+
+.blog-post-content h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 32px 0 12px;
+}
+
+.blog-post-content p {
+  margin-bottom: 20px;
+}
+
+.blog-post-content ul, .blog-post-content ol {
+  margin: 16px 0;
+  padding-left: 24px;
+}
+
+.blog-post-content li {
+  margin-bottom: 8px;
+}
+
+.blog-post-content strong {
+  color: #fff;
+}
+
+.blog-post-content a {
+  color: var(--signia-red);
+}
+
+.blog-post-content .highlight-box {
+  background: rgba(225,0,26,0.06);
+  border-left: 3px solid var(--signia-red);
+  padding: 20px 24px;
+  border-radius: 0 12px 12px 0;
+  margin: 24px 0;
+}
+
+.blog-post-content .highlight-box.teal {
+  background: rgba(0,153,153,0.06);
+  border-left-color: var(--siemens-teal);
+}
+
+.blog-related {
+  padding: 60px 0;
+  background: #111;
+}
+
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .blog-post-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .blog-card-image {
+    height: 140px;
+  }
+}
+
+@media (max-width: 576px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-post-hero {
+    margin-top: 60px;
+    padding: 40px 0 28px;
+  }
+
+  .blog-post-hero h1 {
+    font-size: 1.3rem;
+  }
+
+  .blog-post-content {
+    padding: 40px 16px;
+    font-size: 0.92rem;
+  }
+}
+
 /* ============================================
    Mobile Fixes - Marquee, Grids, Carousel
    ============================================ */
