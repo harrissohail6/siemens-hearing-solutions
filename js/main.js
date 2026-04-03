@@ -202,6 +202,38 @@ function convertPrices(currency) {
 document.addEventListener('DOMContentLoaded', initCurrencySwitcher);
 
 // ============================================
+// Conversion Tracking - WhatsApp & Call Clicks
+// ============================================
+document.addEventListener('DOMContentLoaded', () => {
+  window.dataLayer = window.dataLayer || [];
+
+  // Track all WhatsApp link clicks
+  document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+    link.addEventListener('click', () => {
+      dataLayer.push({
+        event: 'whatsapp_click',
+        click_location: link.closest('nav') ? 'navbar' :
+                        link.classList.contains('whatsapp-float') ? 'floating_button' :
+                        link.closest('footer') ? 'footer' :
+                        link.closest('.hero') ? 'hero' : 'page_body',
+        page_url: window.location.href
+      });
+    });
+  });
+
+  // Track all Call link clicks
+  document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+    link.addEventListener('click', () => {
+      dataLayer.push({
+        event: 'call_click',
+        click_location: link.closest('footer') ? 'footer' : 'page_body',
+        page_url: window.location.href
+      });
+    });
+  });
+});
+
+// ============================================
 // Testimonial Mobile Carousel Dots
 // ============================================
 function initTestimonialCarousel() {
