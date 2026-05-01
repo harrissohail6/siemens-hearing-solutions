@@ -21,32 +21,132 @@
   <meta property="og:image:height" content="630">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Siemens Hearing Solutions Pakistan",
-    "description": "Authorized Siemens Signia hearing aid dealer in Pakistan offering premium hearing aids at best prices",
-    "url": "https://www.siemenshearingsolutions.com",
-    "telephone": "+92-333-1911824",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "PK",
-      "addressLocality": "Islamabad",
-      "addressRegion": "Islamabad Capital Territory",
-      "streetAddress": "Blue Area, Islamabad"
+{
+  "@context": "https://schema.org",
+  "@type": "HearingAidStore",
+  "@id": "https://www.siemenshearingsolutions.com/#localbusiness",
+  "name": "Siemens Hearing Solutions Pakistan",
+  "alternateName": "Siemens Signia Hearing Solutions Islamabad & Rawalpindi",
+  "description": "Authorized Siemens Signia hearing aid dealer serving Islamabad and Rawalpindi. Original German hearing aids, free hearing tests by qualified audiologists, and home delivery across Pakistan.",
+  "url": "https://www.siemenshearingsolutions.com",
+  "telephone": "+92-333-1911824",
+  "priceRange": "Rs.25,000 - Rs.1,755,000",
+  "image": "https://www.siemenshearingsolutions.com/images/logo.webp",
+  "logo": "https://www.siemenshearingsolutions.com/images/logo.webp",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "PK",
+    "addressLocality": "Islamabad",
+    "addressRegion": "Islamabad Capital Territory",
+    "streetAddress": "Blue Area, Islamabad"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 33.7167,
+    "longitude": 73.05
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Islamabad"
     },
-    "priceRange": "Rs.25,000 - Rs.650,000",
-    "areaServed": "PK",
-    "image": "https://www.siemenshearingsolutions.com/images/logo.png",
-    "sameAs": [
-      "https://wa.me/923331911824"
+    {
+      "@type": "City",
+      "name": "Rawalpindi"
+    },
+    {
+      "@type": "Country",
+      "name": "Pakistan"
+    }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "10:00",
+      "closes": "19:00"
+    }
+  ],
+  "sameAs": [
+    "https://wa.me/923331911824"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Siemens Signia Hearing Aid Range",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "BTE Hearing Aids"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "RIC Hearing Aids"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "CIC / IIC Hearing Aids"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Click CIC (Silk) Hearing Aids"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Rechargeable Hearing Aids"
+      }
     ]
   }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.siemenshearingsolutions.com/#organization",
+  "name": "Siemens Hearing Solutions Pakistan",
+  "url": "https://www.siemenshearingsolutions.com",
+  "logo": "https://www.siemenshearingsolutions.com/images/logo.webp",
+  "sameAs": [
+    "https://wa.me/923331911824"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+92-333-1911824",
+    "contactType": "customer service",
+    "areaServed": "PK",
+    "availableLanguage": [
+      "English",
+      "Urdu"
+    ]
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.siemenshearingsolutions.com/#website",
+  "url": "https://www.siemenshearingsolutions.com",
+  "name": "Siemens Hearing Solutions",
+  "publisher": {
+    "@id": "https://www.siemenshearingsolutions.com/#organization"
+  },
+  "inLanguage": "en-PK"
+}
   </script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -527,52 +627,68 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- FAQ Schema Markup -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is the price of Siemens hearing aid in Pakistan?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Siemens Signia hearing aid prices in Pakistan range from Rs.25,000 for basic digital models to Rs.650,000 for premium AI-powered devices. We offer three price tiers: German Original, Singapore models, and China models to suit every budget."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Which is the best hearing aid in Pakistan?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The best hearing aid in Pakistan depends on your hearing loss type, lifestyle, and budget. Siemens Signia offers premium German-engineered hearing aids with advanced features. Our audiologists perform professional hearing tests to determine your specific needs."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long do Siemens Signia hearing aids last?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Siemens Signia hearing aids typically last 4-6 years with proper care. Battery life depends on the model: standard hearing aids use replaceable batteries lasting 3-10 days, while rechargeable models provide a full day of use on a single charge."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Where can I buy Siemens hearing aids in Pakistan?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can buy Siemens Signia hearing aids from us, an authorized dealer in Pakistan. We deliver nationwide with secure packaging and accept orders via WhatsApp."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you offer professional hearing tests?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, we offer completely professional hearing tests in Pakistan. Our qualified audiologists conduct comprehensive assessments to accurately measure your hearing loss and determine the best hearing aid for you."
-        }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where can I buy Siemens Signia hearing aids in Islamabad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We are an authorized Siemens Signia dealer based in Blue Area, Islamabad. We stock all Signia models — BTE, RIC, CIC, Silk, and rechargeable — with free hearing tests, professional fitting, and same-day delivery within Islamabad. WhatsApp 0333-1911824 to schedule a visit."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I buy Siemens Signia hearing aids in Rawalpindi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We deliver Siemens Signia hearing aids next-day across Rawalpindi (Saddar, Satellite Town, Bahria Town, Cantt, and surrounding areas). Free hearing test, fitting, and after-sales support. WhatsApp 0333-1911824 for stock and pricing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the price of Siemens Signia hearing aids in Pakistan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Siemens Signia hearing aid prices in Pakistan range from Rs.25,000 (entry-level China copy) to Rs.1,755,000 (top-tier German Original Pure Charge & Go). Three tiers available: German Original (best, 6-10 years), Singapore 1st copy (1-2 years), and China 2nd copy (6-12 months)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which is the best Siemens Signia hearing aid?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The best Signia hearing aid for you depends on your audiogram, lifestyle, and budget. Popular picks: Signia Motion 3Nx for everyday use, Signia Pure Charge & Go for rechargeable convenience, Signia Silk 1X for invisible fit. Book a free hearing test for a personalized recommendation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer free hearing tests in Islamabad and Rawalpindi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — we offer free professional hearing tests (Pure Tone Audiometry + Tympanometry) at our Islamabad clinic, and the test is free with any hearing aid purchase. Conducted by qualified audiologists with full audiogram report."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long do Siemens Signia hearing aids last?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "German Original Signia hearing aids typically last 6-10 years with proper care. Singapore 1st copy lasts 1-2 years. China 2nd copy lasts 6-12 months. Rechargeable models hold a full-day charge for 2-3 years before battery replacement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are Siemens and Signia the same brand?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — Signia is the modern brand name for Siemens hearing aids. Siemens divested its hearing aid division in 2015 and the Signia brand continues the same German engineering legacy. Many customers in Pakistan still call them Siemens hearing aids."
+      }
+    }
+  ]
+}
   </script>
 
   <!-- ========== CTA ========== -->
