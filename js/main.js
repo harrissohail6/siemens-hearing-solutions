@@ -231,18 +231,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
-
-  // Track appointment booking link clicks
-  document.querySelectorAll('a[href*="appointments.professionalhearingsolution.com"]').forEach(link => {
-    link.addEventListener('click', () => {
-      dataLayer.push({
-        event: 'appointment_click',
-        click_location: link.closest('nav') ? 'navbar' :
-                        link.closest('footer') ? 'footer' : 'page_body',
-        page_url: window.location.href
-      });
-    });
-  });
 });
 
 // ============================================
