@@ -130,9 +130,9 @@ ul { list-style: none; }
 .nav-logo .logo-text .siemens { color: var(--siemens-teal); }
 
 .nav-logo .logo-sub {
-  font-size: 0.7rem;
+  font-size: 0.62rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: var(--medium-grey);
   display: block;
 }
@@ -920,9 +920,9 @@ ul { list-style: none; }
 .footer-about .footer-logo .siemens { color: var(--siemens-teal); }
 
 .footer-about .footer-logo-sub {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.2px;
   color: rgba(255,255,255,0.4);
   margin-bottom: 16px;
   display: block;
@@ -1891,8 +1891,8 @@ ul { list-style: none; }
   }
 
   .nav-logo .logo-sub {
-    font-size: 0.6rem;
-    letter-spacing: 1.5px;
+    font-size: 0.52rem;
+    letter-spacing: 0.8px;
   }
 
   .nav-links {
