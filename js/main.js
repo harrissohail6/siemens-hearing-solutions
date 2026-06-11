@@ -231,6 +231,17 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  // Track all Email link clicks
+  document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+    link.addEventListener('click', () => {
+      dataLayer.push({
+        event: 'email_click',
+        click_location: link.closest('footer') ? 'footer' : 'page_body',
+        page_url: window.location.href
+      });
+    });
+  });
 });
 
 // ============================================
