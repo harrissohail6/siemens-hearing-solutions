@@ -19,12 +19,13 @@
   <meta property="og:image" content="https://www.siemenshearingsolutions.com/images/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="css/style.css">
+  <style>
+    :root{--signia-red:#e1001a;--signia-red-dark:#b80015;--siemens-teal:#007272;--siemens-teal-dark:#005858;--signia-grey:#5f6368;--dark:#1a1a1a;--dark-grey:#333;--medium-grey:#666;--white:#fff;--shadow-lg:0 10px 40px rgba(0,0,0,.12);--font-primary:"Segoe UI",Arial,sans-serif;--max-width:1200px}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{font-size:16px;-webkit-text-size-adjust:100%}body{background:#fff;color:#333;font-family:var(--font-primary);line-height:1.6;overflow-x:hidden}body>section:not(.hero),body>footer{content-visibility:auto;contain-intrinsic-size:auto 720px}a{color:inherit;text-decoration:none}img{display:block;height:auto;max-width:100%}.navbar{background:#fff;box-shadow:0 1px 10px rgba(0,0,0,.08);left:0;position:fixed;right:0;top:0;z-index:1000}.nav-container{align-items:center;display:flex;height:72px;justify-content:space-between;margin:0 auto;max-width:var(--max-width);padding:0 20px}.nav-logo{align-items:center;display:flex;gap:12px}.nav-logo .logo-text{font-size:1.3rem;font-weight:700;letter-spacing:-.5px}.nav-logo .siemens{color:var(--siemens-teal)}.nav-logo .signia-red{color:var(--signia-red)}.nav-logo .signia-grey{color:var(--signia-grey)}.nav-logo .logo-sub{color:var(--medium-grey);display:block;font-size:.7rem;letter-spacing:2px;text-transform:uppercase}.nav-links{align-items:center;display:flex;gap:32px}.nav-links a{color:var(--dark-grey);font-size:.9rem;font-weight:500;padding:4px 0;position:relative}.nav-cta{background:var(--siemens-teal)!important;border-radius:50px;color:#fff!important;font-size:.85rem!important;font-weight:600!important;letter-spacing:.5px;padding:10px 24px!important}.hamburger{background:transparent;border:0;color:inherit;cursor:pointer;display:none;flex-direction:column;gap:5px;padding:5px}.hamburger span{background:var(--dark);height:2px;width:25px}.hero{align-items:center;display:flex;margin-top:72px}.hero-bg-effects{inset:0;position:absolute;z-index:1}.hero-glow{border-radius:50%;filter:blur(80px);position:absolute}.hero-glow-1{background:rgba(225,0,26,.12);height:500px;right:-5%;top:-10%;width:500px}.hero-glow-2{background:rgba(0,153,153,.1);bottom:-15%;height:400px;left:-5%;width:400px}.hero-glow-3{background:rgba(225,0,26,.06);height:300px;left:50%;top:40%;transform:translateX(-50%);width:300px}.hero-grid-pattern{background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:60px 60px;inset:0;position:absolute}.hero-content{align-items:center;display:flex;flex-direction:column;margin:0 auto;max-width:var(--max-width);padding:0 20px;position:relative;text-align:center;width:100%;z-index:2}.hero-logo-wrapper{height:100px;margin:0 auto 28px;position:relative;width:100px}.hero-logo-ring{border:2px solid transparent;border-radius:50%;border-right-color:var(--siemens-teal);border-top-color:var(--signia-red);inset:-8px;position:absolute}.hero-logo-img{border:3px solid rgba(255,255,255,.1);border-radius:50%;height:100px;width:100px}.hero-brand-text{align-items:center;display:flex;gap:20px;justify-content:center;margin-bottom:12px}.hero-signia{font-size:2.8rem;font-weight:800;letter-spacing:2px}.hero-divider{background:rgba(255,255,255,.15);height:36px;width:1px}.hero-siemens{font-size:1.6rem;font-weight:700;letter-spacing:4px}.hero-badge{border:1px solid rgba(225,0,26,.2);border-radius:50px;display:inline-block;font-size:.8rem;font-weight:600;letter-spacing:1.5px;margin-bottom:24px;padding:6px 16px;text-transform:uppercase}.hero-text h1{font-size:3.2rem;font-weight:800;letter-spacing:-1px;line-height:1.15;margin-bottom:20px}.hero-text p{font-size:1.1rem;line-height:1.7}.hero-buttons{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}.btn{align-items:center;border:0;border-radius:50px;cursor:pointer;display:inline-flex;font-size:.9rem;font-weight:600;gap:8px;letter-spacing:.3px;padding:14px 32px}.btn-primary{background:var(--signia-red);color:#fff}.hero-scroll-indicator{bottom:32px;left:50%;position:absolute;transform:translateX(-50%);z-index:3}.hero-scroll-line{background:linear-gradient(to bottom,rgba(255,255,255,.4),transparent);height:40px;width:1px}
+    @media(max-width:768px){.nav-links{background:#fff;bottom:0;box-shadow:var(--shadow-lg);display:none;flex-direction:column;gap:20px;left:0;overflow-y:auto;padding:32px 24px;position:fixed;right:0;top:72px;z-index:999}.nav-links.active{display:flex}.nav-links a{font-size:1.05rem;padding:8px 0}.hamburger{display:flex}.hero{padding:60px 0 50px}.hero-logo-wrapper,.hero-logo-img{height:80px;width:80px}.hero-logo-ring{inset:-6px}.hero-signia{font-size:2rem}.hero-siemens{font-size:1.2rem}.hero-glow-1{height:300px;width:300px}.hero-glow-2{height:250px;width:250px}.hero-glow-3{height:200px;width:200px}.hero-scroll-indicator{display:none}.hero-text h1{font-size:2rem}.hero-text p{font-size:.95rem}}
+    @media(max-width:576px){.nav-container{height:60px}.nav-logo img{height:40px!important;width:40px!important}.nav-logo .logo-text{font-size:1.1rem}.nav-logo .logo-sub{font-size:.6rem;letter-spacing:1.5px}.nav-links{top:60px}.hero{margin-top:60px;padding:40px 0}.hero-brand-text{flex-direction:column;gap:8px}.hero-divider{height:1px;width:40px}.hero-logo-wrapper,.hero-logo-img{height:70px;width:70px}.hero-logo-wrapper{margin-bottom:20px}.hero-signia{font-size:1.8rem}.hero-siemens{font-size:1rem}.hero-text h1{font-size:1.7rem;letter-spacing:-.5px}.hero-text p{font-size:.88rem;line-height:1.6}.hero-buttons{align-items:stretch;flex-direction:column}.btn{justify-content:center;padding:12px 24px;width:100%}}
+  </style>
+  <link rel="preload" href="css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.min.css"></noscript>
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
@@ -142,39 +143,20 @@
   "inLanguage": "en-PK"
 }
   </script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WD7TF3T3');</script>
-<!-- End Google Tag Manager -->
-<!-- Google tag (gtag.js) - Google Ads -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=GT-KT4BS837"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'GT-KT4BS837');
-</script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WD7TF3T3"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
   <!-- ========== NAVBAR ========== -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
-        <img src="images/logo.webp" alt="Signia Logo" style="width:52px;height:52px;border-radius:50%;">
+        <img src="images/logo-224.webp" alt="" width="52" height="52" style="width:52px;height:52px;border-radius:50%;">
         <div>
           <span class="logo-text"><span class="siemens">Siemens </span><span class="signia-red">Si</span><span class="signia-grey">gnia</span></span>
           <span class="logo-sub">Hearing Solutions</span>
         </div>
       </a>
-      <div class="nav-links">
+      <div class="nav-links" id="primary-navigation">
         <a href="index.html" class="active">Home</a>
         <a href="products.html">Products & Prices</a>
         <a href="hearing-tests.html">Hearing Tests</a>
@@ -182,11 +164,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="#contact">Contact</a>
         <a href="mailto:contact@siemenshearingsolutions.com" class="nav-cta">Email Us</a>
       </div>
-      <div class="hamburger">
+      <button class="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
     </div>
   </nav>
 
@@ -204,13 +186,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- Animated Signia Logo -->
         <div class="hero-logo-wrapper">
           <div class="hero-logo-ring"></div>
-          <img src="images/logo.webp" alt="Signia" class="hero-logo-img">
+          <img src="images/logo-224.webp" alt="Signia" class="hero-logo-img" width="100" height="100" fetchpriority="high">
         </div>
         <!-- Brand Names -->
         <div class="hero-brand-text">
-          <span class="hero-signia"><span style="color:var(--signia-red);">si</span><span style="color:var(--signia-grey);">gnia</span></span>
+          <span class="hero-signia"><span style="color:var(--signia-red);">si</span><span style="color:#c5c7c9;">gnia</span></span>
           <span class="hero-divider"></span>
-          <span class="hero-siemens" style="color:var(--siemens-teal);">SIEMENS</span>
+          <span class="hero-siemens" style="color:#36c9c9;">SIEMENS</span>
         </div>
         <div style="font-size:0.75rem;color:rgba(255,255,255,0.3);font-style:italic;letter-spacing:2px;margin-bottom:28px;">Qualit&auml;t aus Deutschland &mdash; Quality from Germany</div>
         <span class="hero-badge" style="background:rgba(225,0,26,0.15);border-color:rgba(225,0,26,0.3);color:#ff6b7a;">Authorized Dealer in Pakistan</span>
@@ -218,12 +200,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p style="color:rgba(255,255,255,0.55);max-width:560px;margin:20px auto 40px;font-size:1.05rem;line-height:1.8;">Premium German-engineered hearing aids with advanced AI sound processing, Bluetooth connectivity, and personalized audiological care. Trusted by thousands across Pakistan.</p>
         <div class="hero-buttons" style="justify-content:center;gap:16px;">
           <a href="products.html" class="btn btn-primary" style="padding:16px 40px;font-size:1rem;box-shadow:0 4px 25px rgba(225,0,26,0.3);">Explore Hearing Aids &#8594;</a>
-          <a href="mailto:contact@siemenshearingsolutions.com" class="btn" style="background:#25d366;color:#fff;padding:16px 40px;font-size:1rem;box-shadow:0 4px 25px rgba(37,211,102,0.3);" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> Email Us</a>
+          <a href="mailto:contact@siemenshearingsolutions.com" class="btn" style="background:#087f23;color:#fff;padding:16px 40px;font-size:1rem;box-shadow:0 4px 25px rgba(8,127,35,0.3);" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> Email Us</a>
         </div>
       </div>
     </div>
     <!-- Scroll indicator -->
-    <div class="hero-scroll-indicator">
+    <div class="hero-scroll-indicator" aria-hidden="true">
       <div class="hero-scroll-line"></div>
     </div>
   </section>
@@ -316,7 +298,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;" class="product-row">
         <a href="products.html#bte" class="fade-up" style="text-decoration:none;display:block;border-radius:20px;overflow:hidden;border:1px solid var(--border-grey);box-shadow:var(--shadow);transition:all 0.4s ease;position:relative;background:#fff;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 20px 50px rgba(225,0,26,0.12)';this.querySelector('.prod-overlay').style.opacity='1'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow)';this.querySelector('.prod-overlay').style.opacity='0'">
           <div style="background:linear-gradient(135deg,#fafafa,#f0f0f0);padding:32px 20px;text-align:center;min-height:180px;display:flex;align-items:center;justify-content:center;">
-            <img loading="lazy" src="images/bte.png" alt="BTE Hearing Aid Pakistan" style="width:260px;height:260px;object-fit:contain;">
+            <img loading="lazy" decoding="async" src="images/bte-260.webp" srcset="images/bte-260.webp 1x, images/bte-520.webp 2x" alt="BTE hearing aid" width="260" height="260" style="width:260px;height:260px;object-fit:contain;">
           </div>
           <div style="padding:20px;text-align:center;">
             <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:2px;color:var(--signia-red);font-weight:700;margin-bottom:6px;">Behind-The-Ear</div>
@@ -328,7 +310,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
         <a href="products.html#ric" class="fade-up" style="text-decoration:none;display:block;border-radius:20px;overflow:hidden;border:1px solid var(--border-grey);box-shadow:var(--shadow);transition:all 0.4s ease;position:relative;background:#fff;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 20px 50px rgba(0,153,153,0.12)';this.querySelector('.prod-overlay').style.opacity='1'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow)';this.querySelector('.prod-overlay').style.opacity='0'">
           <div style="background:linear-gradient(135deg,#fafafa,#f0f0f0);padding:32px 20px;text-align:center;min-height:180px;display:flex;align-items:center;justify-content:center;">
-            <img loading="lazy" src="images/ric.png" alt="RIC Hearing Aid Pakistan" style="width:260px;height:260px;object-fit:contain;">
+            <img loading="lazy" decoding="async" src="images/ric-260.webp" srcset="images/ric-260.webp 1x, images/ric-520.webp 2x" alt="RIC hearing aid" width="260" height="260" style="width:260px;height:260px;object-fit:contain;">
           </div>
           <div style="padding:20px;text-align:center;">
             <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:2px;color:var(--siemens-teal);font-weight:700;margin-bottom:6px;">Receiver-In-Canal</div>
@@ -340,7 +322,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
         <a href="products.html#cic" class="fade-up" style="text-decoration:none;display:block;border-radius:20px;overflow:hidden;border:1px solid var(--border-grey);box-shadow:var(--shadow);transition:all 0.4s ease;position:relative;background:#fff;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 20px 50px rgba(225,0,26,0.12)';this.querySelector('.prod-overlay').style.opacity='1'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow)';this.querySelector('.prod-overlay').style.opacity='0'">
           <div style="background:linear-gradient(135deg,#fafafa,#f0f0f0);padding:32px 20px;text-align:center;min-height:180px;display:flex;align-items:center;justify-content:center;">
-            <img loading="lazy" src="images/cic-click.png" alt="CIC IIC Hearing Aid Pakistan" style="width:260px;height:260px;object-fit:contain;">
+            <img loading="lazy" decoding="async" src="images/cic-click-260.webp" srcset="images/cic-click-260.webp 1x, images/cic-click-520.webp 2x" alt="CIC and IIC hearing aids" width="260" height="260" style="width:260px;height:260px;object-fit:contain;">
           </div>
           <div style="padding:20px;text-align:center;">
             <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:2px;color:var(--signia-red);font-weight:700;margin-bottom:6px;">Invisible-In-Canal</div>
@@ -352,7 +334,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
         <a href="products.html#rechargeable" class="fade-up" style="text-decoration:none;display:block;border-radius:20px;overflow:hidden;border:1px solid var(--border-grey);box-shadow:var(--shadow);transition:all 0.4s ease;position:relative;background:#fff;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 20px 50px rgba(0,153,153,0.12)';this.querySelector('.prod-overlay').style.opacity='1'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow)';this.querySelector('.prod-overlay').style.opacity='0'">
           <div style="background:linear-gradient(135deg,#fafafa,#f0f0f0);padding:32px 20px;text-align:center;min-height:180px;display:flex;align-items:center;justify-content:center;">
-            <img loading="lazy" src="images/rechargeable.png" alt="Rechargeable Hearing Aid Pakistan" style="width:260px;height:260px;object-fit:contain;">
+            <img loading="lazy" decoding="async" src="images/rechargeable-260.webp" srcset="images/rechargeable-260.webp 1x, images/rechargeable-520.webp 2x" alt="Rechargeable hearing aid" width="260" height="260" style="width:260px;height:260px;object-fit:contain;">
           </div>
           <div style="padding:20px;text-align:center;">
             <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:2px;color:var(--siemens-teal);font-weight:700;margin-bottom:6px;">Charge &amp; Go</div>
@@ -703,7 +685,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p>Siemens Signia offers state-of-the-art hearing solutions to suit your personal preference. Whether you value discretion, style, or modernity, Siemens Signia has the perfect hearing solution for you.</p>
         </div>
         <div>
-          <h4>Products</h4>
+          <h3>Products</h3>
           <ul>
             <li><a href="products.html#bte">BTE Hearing Aids</a></li>
             <li><a href="products.html#ric">RIC Hearing Aids</a></li>
@@ -713,17 +695,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </ul>
         </div>
         <div>
-          <h4>Brands</h4>
+          <h3>Brands</h3>
           <ul>
             <li><a href="products.html">Siemens Signia</a></li>
                                               </ul>
         </div>
         <div>
-          <h4>Contact</h4>
+          <h3>Contact</h3>
           <ul>
             <li><a href="mailto:contact@siemenshearingsolutions.com" style="word-break:break-all;">Email: contact@siemenshearingsolutions.com</a></li>
-            <li style="color:rgba(255,255,255,0.6);font-size:0.9rem;margin-top:12px;">Blue Area, Islamabad</li>
-            <li style="color:rgba(255,255,255,0.4);font-size:0.8rem;">We operate & deliver throughout Pakistan</li>
+            <li style="color:rgba(255,255,255,0.82);font-size:0.9rem;margin-top:12px;">Blue Area, Islamabad</li>
+            <li style="color:rgba(255,255,255,0.78);font-size:0.8rem;">We operate & deliver throughout Pakistan</li>
           </ul>
         </div>
       </div>
@@ -735,8 +717,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </footer>
 
   <!-- Email Float Button -->
-  <a href="mailto:contact@siemenshearingsolutions.com" class="whatsapp-float" title="Email us"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+  <a href="mailto:contact@siemenshearingsolutions.com" class="whatsapp-float" aria-label="Email Siemens Hearing Solutions"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 </html>

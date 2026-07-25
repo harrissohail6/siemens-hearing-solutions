@@ -5,17 +5,24 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Navbar scroll effect
   const navbar = document.querySelector('.navbar');
+  let navbarFrame = 0;
   window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
-  });
+    if (navbarFrame) return;
+    navbarFrame = requestAnimationFrame(() => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+      navbarFrame = 0;
+    });
+  }, { passive: true });
 
   // Mobile menu toggle
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
   if (hamburger) {
     hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navLinks.classList.toggle('active');
+      const isOpen = hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active', isOpen);
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+      hamburger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
     });
 
     // Close menu on link click
@@ -23,22 +30,28 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         navLinks.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open navigation menu');
       });
     });
   }
 
   // Fade-up animation on scroll
   const fadeElements = document.querySelectorAll('.fade-up');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    fadeElements.forEach(el => el.classList.add('visible'));
+  } else {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-  fadeElements.forEach(el => observer.observe(el));
+    fadeElements.forEach(el => observer.observe(el));
+  }
 
   // Product filter tabs
   const filterTabs = document.querySelectorAll('.filter-tab');
@@ -109,11 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-
-// Fade-in keyframe for filter animation
-const style = document.createElement('style');
-style.textContent = `@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }`;
-document.head.appendChild(style);
 
 // ============================================
 // Currency Switcher
@@ -244,16 +252,46 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Load analytics only after real user interaction. This keeps third-party
+// scripts out of the critical rendering path while preserving conversion data.
+(() => {
+  let analyticsLoaded = false;
+
+  const loadAnalytics = () => {
+    if (analyticsLoaded) return;
+    analyticsLoaded = true;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
+
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-WD7TF3T3';
+    document.head.appendChild(script);
+
+    analyticsEvents.forEach((eventName) => {
+      window.removeEventListener(eventName, loadAnalytics);
+    });
+  };
+
+  const analyticsEvents = ['pointerdown', 'keydown', 'scroll'];
+  analyticsEvents.forEach((eventName) => {
+    window.addEventListener(eventName, loadAnalytics, { once: true, passive: true });
+  });
+})();
+
 // ============================================
 // Testimonial Mobile Carousel Dots
 // ============================================
 function initTestimonialCarousel() {
   if (window.innerWidth > 768) return;
   const grid = document.querySelector('.testimonials-grid');
-  if (!grid) return;
+  if (!grid || grid.dataset.carouselReady === 'true') return;
 
   const cards = grid.querySelectorAll('.testimonial-card');
   if (cards.length === 0) return;
+  grid.dataset.carouselReady = 'true';
+  let cardWidth = 0;
+  let scrollFrame = 0;
 
   // Create dots container
   let dotsContainer = document.querySelector('.testimonial-dots');
@@ -273,15 +311,23 @@ function initTestimonialCarousel() {
     });
   }
 
+  const measureCards = () => {
+    cardWidth = cards[0].getBoundingClientRect().width + 16;
+  };
+  requestAnimationFrame(measureCards);
+  window.addEventListener('resize', measureCards, { passive: true });
+
   // Update dots on scroll
   grid.addEventListener('scroll', () => {
-    const scrollLeft = grid.scrollLeft;
-    const cardWidth = cards[0].offsetWidth + 16;
-    const activeIndex = Math.round(scrollLeft / cardWidth);
-    dotsContainer.querySelectorAll('div').forEach((dot, i) => {
-      dot.style.background = i === activeIndex ? 'var(--signia-red)' : 'rgba(255,255,255,0.2)';
+    if (scrollFrame || !cardWidth) return;
+    scrollFrame = requestAnimationFrame(() => {
+      const activeIndex = Math.round(grid.scrollLeft / cardWidth);
+      dotsContainer.querySelectorAll('div').forEach((dot, i) => {
+        dot.style.background = i === activeIndex ? 'var(--signia-red)' : 'rgba(255,255,255,0.2)';
+      });
+      scrollFrame = 0;
     });
-  });
+  }, { passive: true });
 }
 
 document.addEventListener('DOMContentLoaded', initTestimonialCarousel);
