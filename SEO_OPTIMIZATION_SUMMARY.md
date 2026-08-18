@@ -34,7 +34,7 @@
 **Enhancements:**
 - Updated name to "Siemens Hearing Solutions Pakistan"
 - Added addressLocality: "Pakistan"
-- Updated priceRange: "Rs.25,000 - Rs.650,000" (more accurate)
+- Updated priceRange: "Rs.35,000 - Rs.1,955,000" (current catalog range)
 - Added areaServed: "PK"
 - Added image field
 - Added sameAs field for social verification
